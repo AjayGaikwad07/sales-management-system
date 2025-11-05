@@ -1,0 +1,101 @@
+/* Base Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+}
+
+.container {
+  padding-bottom: 2rem;
+}
+
+/* Form Styles */
+.sales-entry-form, .sales-list {
+  background: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  margin-bottom: 2rem;
+}
+
+.form-control:read-only {
+  background-color: #e9ecef;
+}
+
+/* Table Styles */
+.table {
+  margin-top: 1rem;
+}
+
+.table th {
+  background-color: #343a40;
+  color: white;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .sales-entry-form, .sales-list {
+    padding: 1rem;
+  }
+  
+  .form-row > .col, 
+  .form-row > [class*="col-"] {
+    padding-right: 5px;
+    padding-left: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .table-responsive {
+    border: 0;
+  }
+  
+  .table thead {
+    display: none;
+  }
+  
+  .table tr {
+    margin-bottom: 10px;
+    display: block;
+    border: 1px solid #ddd;
+  }
+  
+  .table td {
+    display: block;
+    text-align: right;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+  }
+  
+  .table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 10px;
+    width: 45%;
+    padding-right: 10px;
+    font-weight: bold;
+    text-align: left;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  body {
+    background: white;
+    color: black;
+  }
+  
+  .container {
+    width: 100%;
+    padding: 0;
+  }
+  
+  .sales-entry-form {
+    box-shadow: none;
+    border: none;
+    padding: 0;
+  }
+}
